@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+node_modules
+*.sw[mnpcod]
+*.log
+log.txt
+components/
+tmp
+dist
