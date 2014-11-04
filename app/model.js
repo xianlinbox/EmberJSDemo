@@ -24,4 +24,4 @@ Todos.Todo.FIXTURES = [
         title: 'Profit',
         isCompleted: false
     }
-]
+];

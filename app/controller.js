@@ -55,7 +55,7 @@ Todos.TodosController = Ember.ArrayController.extend({
 Todos.TodoController = Ember.ObjectController.extend({
     actions: {
         editTodo: function () {
-            console.log("call EditTodo")
+            console.log("call EditTodo");
             this.set('isEditing', true);
         },
 
@@ -79,7 +79,7 @@ Todos.TodoController = Ember.ObjectController.extend({
 
     isCompleted: function (key, value) {
         var model = this.get('model');
-        if (value == undefined) {
+        if (value === undefined) {
             return model.get('isCompleted');
         } else {
             model.set('isCompleted', value);

@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect');
+var jshint = require('gulp-jshint');
 
 gulp.task('watch', function () {
     gulp.watch(['./app/*.js','./*.html'], ['html']);
@@ -18,5 +19,11 @@ gulp.task('html', function () {
         .pipe(connect.reload());
 });
 
+gulp.task('hint', function () {
+    gulp.src('./app/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('jshint-stylish'));
+});
+
 //运行Gulp时，默认的Task
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['hint','connect', 'watch']);
